@@ -40,9 +40,18 @@ function mergeSort(arr) {
       rightI++;
       continue;
     }
+
+    if (rightElement === leftElement) {
+      sortedArr.push(rightElement);
+      sortedArr.push(leftElement);
+      rightI++;
+      leftI++;
+      continue;
+    }
   }
 
   return sortedArr;
 }
 
+// console.log(myArr);
 console.log(mergeSort(myArr));
